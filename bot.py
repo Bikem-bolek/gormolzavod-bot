@@ -1,3 +1,4 @@
+import os
 from telegram import Update
 from telegram.ext import (
     ApplicationBuilder,
@@ -8,18 +9,17 @@ from telegram.ext import (
     filters,
 )
 
-TOKEN = "8826347740:AAGT7X5Uu0bTqzmDFbbmxzVO1OQ5uvQhW0E"
+TOKEN = os.getenv("TOKEN")
 
-NAME, PHONE = range(2)
 
 users = {}
 
 valid_codes = {
-    "KURT100": 10,
-    "KURT200": 20,
+    "KURT100": 50,
+    "KURT200": 50,
     "KURT500": 50,
-    "GORMOL100": 100,
-    "AKMOLA200": 200,
+    "GORMOL100": 50,
+    "AKMOLA200": 50,
 }
 
 used_codes = set()
